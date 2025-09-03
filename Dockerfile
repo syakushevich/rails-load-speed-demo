@@ -19,6 +19,7 @@ FROM base AS build
 
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y build-essential git libyaml-dev node-gyp pkg-config python-is-python3 && \
+    unzip \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Install Node + Yarn
